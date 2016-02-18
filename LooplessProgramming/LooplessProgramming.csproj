@@ -46,7 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ex1_LoopFiltering.cs" />
-    <Compile Include="Model\Classes.cs" />
+    <Compile Include="Ex2_ExtractedLoop.cs" />
+    <Compile Include="Model\AllDataModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleData.cs" />

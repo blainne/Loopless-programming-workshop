@@ -15,6 +15,7 @@ namespace LooplessProgramming
             //This function should return a collection of ships
             //that are commanded by captains with service 
             //no longer than 25 years.
+
             //Use a loop to implement it.
 
             var result = new List<SpaceWarship>();

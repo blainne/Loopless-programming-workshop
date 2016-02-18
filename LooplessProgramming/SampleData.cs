@@ -193,7 +193,7 @@ namespace LooplessProgramming
 
                 new Fleet
                 {
-                    Name = "Fast reaction fleet",
+                    Name = "Quick reaction fleet",
                     Commander = new Person
                     {
                         Name = "Deep Blue AI",

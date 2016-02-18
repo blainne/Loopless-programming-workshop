@@ -16,8 +16,16 @@ namespace LooplessProgramming.Tests
             var result = Ex1.GetShipsWithYoungCaptains();
 
             result
-                .Should().OnlyContain(ship => ship.Captain.YearsOfService <= 25)
-                .And.OnlyHaveUniqueItems();
+                .Should().OnlyContain(ship => ship.Captain.YearsOfService <= 25);
+        }
+
+        [TestMethod]
+        public void NoDuplicateShips()
+        {
+            var result = Ex1.GetShipsWithYoungCaptains();
+
+            result
+                .Should().OnlyHaveUniqueItems();
         }
     }
 }
