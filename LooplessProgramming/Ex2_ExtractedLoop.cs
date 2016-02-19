@@ -19,10 +19,7 @@ namespace LooplessProgramming
             //This function should return a collection of ships
             //that belong to cruiser class and have at least 2000 crew members.
 
-
-
-            return
-                GetShipsSatisfyingCondition(data, IsCruiserWithCrewOver2000);
+            return GetShipsSatisfyingCondition(data, IsCruiserWithCrewOver2000);
 
         }
 
@@ -32,8 +29,7 @@ namespace LooplessProgramming
             //that belong to destroyer class and are members of quick reaction fleet.
 
 
-            return 
-                GetShipsSatisfyingCondition(
+            return GetShipsSatisfyingCondition(
                     data, 
                     (ship) => IsDestroyerInQuickReactionFleet(data, ship)
                 );

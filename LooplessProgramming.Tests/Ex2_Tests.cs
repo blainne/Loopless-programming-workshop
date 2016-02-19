@@ -56,13 +56,9 @@ namespace LooplessProgramming.Tests
         {
             var result = Ex2.GetQuickReactingDestroyers(data);
 
-            result
-                .Should()
-                .OnlyContain(
+            result.Should().OnlyContain(
                     ship => 
-                        data.Fleets["Quick reaction fleet"]
-                            .Ships
-                            .Contains(ship));
+                        data.Fleets["Quick reaction fleet"].Ships.Contains(ship));
                 
         }
     }
