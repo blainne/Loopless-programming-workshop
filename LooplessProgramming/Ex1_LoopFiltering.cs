@@ -9,8 +9,7 @@ namespace LooplessProgramming
 {
     public class Ex1_LoopFiltering
     {
-        private SampleData data = new SampleData();
-        public IEnumerable<SpaceWarship> GetShipsWithYoungCaptains()
+        public IEnumerable<SpaceWarship> GetShipsWithYoungCaptains(SampleData data)
         {
             //This function should return a collection of ships
             //that are commanded by captains with service 

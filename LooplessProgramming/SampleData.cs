@@ -9,8 +9,10 @@ namespace LooplessProgramming
 {
     public class SampleData
     {
+        public const string QuickReactionFleet = "Quick reaction fleet";
+        public const string HomeFleet = "Home fleet";
         public List<SpaceWarship> Ships { get; private set; }
-        public List<Fleet> Fleets { get; private set; }
+        public Dictionary<string, Fleet> Fleets { get; private set; }
 
 
         public SampleData()
@@ -177,30 +179,32 @@ namespace LooplessProgramming
             };
             #endregion
             #region creating fleets
-            Fleets = new List<Fleet>
+            Fleets = new Dictionary<string,Fleet>
             {
-                new Fleet
-                {
-                    Name = "Home fleet",
-                    Commander = new Person
-                    {
-                        Name = "admiral Cro Magnon",
-                        YearsOfService = 40000
-                    },
-                    Ships = this.Ships
+                [HomeFleet] = 
+                        new Fleet
+                        {
+                            Name = HomeFleet,
+                            Commander = new Person
+                            {
+                                Name = "admiral Cro Magnon",
+                                YearsOfService = 40000
+                            },
+                            Ships = this.Ships
 
-                },
+                        },
 
-                new Fleet
-                {
-                    Name = "Quick reaction fleet",
-                    Commander = new Person
-                    {
-                        Name = "Deep Blue AI",
-                        YearsOfService = 20
-                    },
-                    Ships = this.Ships.Where(s => s.Crew < 800)
-                }
+                [QuickReactionFleet] = 
+                        new Fleet
+                        {
+                            Name = QuickReactionFleet,
+                            Commander = new Person
+                            {
+                                Name = "Deep Blue AI",
+                                YearsOfService = 20
+                            },
+                            Ships = this.Ships.Where(s => s.Crew < 800)
+                        }
             };
 
 
