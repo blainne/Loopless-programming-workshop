@@ -12,19 +12,30 @@ namespace LooplessProgramming
         //Like before we want to have a single method that will do the filtering
         //and will be reused in all below public methods
 
-        public IEnumerable<Person> GetCaptainsWithMostResponsiblity()
+        public IEnumerable<Person> GetCaptainsWithMostResponsiblity(SampleData data)
         {
-            //All captains of ships with more than 1500 crew member shall be returned
+            //All captains of ships with at least 1500 crew member shall be returned
 
-            return null;
+            return GetShipsSatisfyingCondition(data, ship => ship.Crew >= 1500);
         }
 
 
-        public IEnumerable<Fleet> GetMultishipFleets()
+        public IEnumerable<Fleet> GetMultishipFleets(SampleData data)
         {
             //Return all fleets with more than 1 ship. 
 
             return null;
+        }
+
+        private List<Person> GetShipsSatisfyingCondition(SampleData data, Func<SpaceWarship, bool> condition)
+        {
+            var result = new List<Person>();
+            foreach (var ship in data.Ships)
+            {
+                if (condition(ship))
+                    result.Add(ship.Captain);
+            }
+            return result;
         }
     }
 }

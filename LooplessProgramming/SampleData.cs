@@ -13,7 +13,7 @@ namespace LooplessProgramming
         public const string HomeFleet = "Home fleet";
         public List<SpaceWarship> Ships { get; private set; }
         public Dictionary<string, Fleet> Fleets { get; private set; }
-
+        public List<Person> Commanders { get; private set; }
 
         public SampleData()
         {
@@ -208,6 +208,12 @@ namespace LooplessProgramming
             };
 
 
+            #endregion
+            #region creating commanders
+            Commanders =
+                Ships.Select(ship => ship.Captain).ToList();
+            Commanders.AddRange(Fleets.Select(pair => pair.Value.Commander));
+            
             #endregion
         }
 

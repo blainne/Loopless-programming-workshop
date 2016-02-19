@@ -61,5 +61,13 @@ namespace LooplessProgramming.Tests
                         data.Fleets["Quick reaction fleet"].Ships.Contains(ship));
                 
         }
+
+        [TestMethod]
+        public void GetQuickReactingDestroyersReturnsNoDuplicateShips()
+        {
+            var result = Ex2.GetQuickReactingDestroyers(data);
+
+            result.Should().OnlyHaveUniqueItems();
+        }
     }
 }
