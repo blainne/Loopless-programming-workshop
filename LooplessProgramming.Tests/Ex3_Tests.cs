@@ -26,6 +26,23 @@ namespace LooplessProgramming.Tests
             result.Should().OnlyContain(captain => ExistsShipWithEnoughCrewAndThisCaptain(captain));
         }
 
+        [TestMethod]
+        public void GetMultishipFleetsReturnsNoDuplicates()
+        {
+            var result = Ex3.GetMultishipFleets(data);
+
+            result.Should().OnlyHaveUniqueItems();
+        }
+
+        [TestMethod]
+        public void GetMultishipFleetsReturnsFleetsWithMoreThanOneShip()
+        {
+            var result = Ex3.GetMultishipFleets(data);
+
+            result.Should().OnlyContain(fleet => fleet.Ships.Count() > 1);
+        }
+            
+
         private bool ExistsShipWithEnoughCrewAndThisCaptain(Model.Person captain)
         {
             return data.Ships.Any(
@@ -34,5 +51,6 @@ namespace LooplessProgramming.Tests
                     && s.Crew >= 1500
             );
         }
+
     }
 }

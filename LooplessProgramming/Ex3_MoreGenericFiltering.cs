@@ -16,24 +16,32 @@ namespace LooplessProgramming
         {
             //All captains of ships with at least 1500 crew member shall be returned
 
-            return GetShipsSatisfyingCondition(data, ship => ship.Crew >= 1500);
+            return GetElementsSatisfyingCondition(
+                data.Commanders,
+                commander => ThereIsAShipWithThisCaptainAndEnoughCrew(data, commander));
         }
 
+        private static bool ThereIsAShipWithThisCaptainAndEnoughCrew(SampleData data, Person commander)
+        {
+            return data.Ships.Any(
+                                ship => ship.Captain.Name == commander.Name
+                                && ship.Crew >= 1500);
+        }
 
         public IEnumerable<Fleet> GetMultishipFleets(SampleData data)
         {
-            //Return all fleets with more than 1 ship. 
-
-            return null;
+            return GetElementsSatisfyingCondition(
+                        data.Fleets.Values, 
+                        fleet => fleet.Ships.Count() > 1);
         }
 
-        private List<Person> GetShipsSatisfyingCondition(SampleData data, Func<SpaceWarship, bool> condition)
+        private List<T> GetElementsSatisfyingCondition<T>(IEnumerable<T> collection, Func<T, bool> condition)
         {
-            var result = new List<Person>();
-            foreach (var ship in data.Ships)
+            var result = new List<T>();
+            foreach (var elem in collection)
             {
-                if (condition(ship))
-                    result.Add(ship.Captain);
+                if (condition(elem))
+                    result.Add(elem);
             }
             return result;
         }
