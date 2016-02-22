@@ -11,7 +11,7 @@ namespace LooplessProgramming.Tests.Filtering
         private readonly SampleData data = new SampleData();
 
         [TestMethod]
-        public void AllCaptainsWithExperienceNoGreaterThan25()
+        public void GetShipsWithYoungCaptainsReturnsCaptainsWithWorkYearsNoMoreThan25()
         {
             var result = Ex1.GetShipsWithYoungCaptains(data);
 
@@ -20,7 +20,7 @@ namespace LooplessProgramming.Tests.Filtering
         }
 
         [TestMethod]
-        public void NoDuplicateShips()
+        public void GetShipsWithYoungCaptainsReturnsNoDuplicateShips()
         {
             var result = Ex1.GetShipsWithYoungCaptains(data);
 

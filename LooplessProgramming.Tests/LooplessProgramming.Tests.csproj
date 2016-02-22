@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="Filtering\FilteringEx1_Tests.cs" />
     <Compile Include="Filtering\FilteringEx2_Tests.cs" />
+    <Compile Include="Mapping\MappingEx1_Tests.cs" />
+    <Compile Include="Mapping\MappingEx2_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Filtering\FilteringEx3_Tests.cs" />
     <Compile Include="Filtering\FilteringEx4_Tests.cs" />
