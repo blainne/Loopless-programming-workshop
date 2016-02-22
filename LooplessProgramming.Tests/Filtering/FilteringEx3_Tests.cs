@@ -1,12 +1,12 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
 using FluentAssertions;
-using System.Linq;
+using LooplessProgramming.Filtering;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LooplessProgramming.Tests
+namespace LooplessProgramming.Tests.Filtering
 {
     [TestClass]
-    public class Ex3_Tests
+    public class FilteringEx3_Tests
     {
         private readonly Ex3_MoreGenericFiltering Ex3 = new Ex3_MoreGenericFiltering();
         private readonly SampleData data = new SampleData();

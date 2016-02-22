@@ -1,13 +1,12 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FluentAssertions;
+﻿using FluentAssertions;
+using LooplessProgramming.Filtering;
 using LooplessProgramming.Model;
-using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LooplessProgramming.Tests
+namespace LooplessProgramming.Tests.Filtering
 {
     [TestClass]
-    public class Ex4_Tests
+    public class FilteringEx4_Tests
     {
         private readonly Ex4_FilterAsExtension.Ex4_FilteringData Ex4 = 
                             new Ex4_FilterAsExtension.Ex4_FilteringData();

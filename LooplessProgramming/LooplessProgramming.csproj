@@ -45,10 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ex1_LoopFiltering.cs" />
-    <Compile Include="Ex2_ExtractedLoop.cs" />
-    <Compile Include="Ex3_MoreGenericFiltering.cs" />
-    <Compile Include="Ex4_FilterAsExtension.cs" />
+    <Compile Include="Filtering\Ex1_LoopFiltering.cs" />
+    <Compile Include="Filtering\Ex2_ExtractedLoop.cs" />
+    <Compile Include="Filtering\Ex3_MoreGenericFiltering.cs" />
+    <Compile Include="Filtering\Ex4_FilterAsExtension.cs" />
+    <Compile Include="Mapping\Ex1_LoopMapping.cs" />
     <Compile Include="Model\AllDataModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
