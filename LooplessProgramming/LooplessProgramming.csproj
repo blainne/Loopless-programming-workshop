@@ -51,6 +51,7 @@
     <Compile Include="Filtering\Ex4_FilterAsExtension.cs" />
     <Compile Include="Mapping\Ex1_LoopMapping.cs" />
     <Compile Include="Mapping\Ex2_ExtractedLoop.cs" />
+    <Compile Include="Mapping\Ex3_MoreGenericMapping.cs" />
     <Compile Include="Model\AllDataModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

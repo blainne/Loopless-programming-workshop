@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LooplessProgramming.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,32 +17,35 @@ namespace LooplessProgramming.Mapping
             //we want to map list of ships into 
             //list of ship's captain's experience (years of service)
 
-            var results = new List<int>();
-            for (int i = 0; i < data.Ships.Count(); i++)
-            {
-                results.Add(data.Ships[i].Captain.YearsOfService);
-            }
-
-            return results;
+            return Project(data.Ships, ship => ship.Captain.YearsOfService);
+            
         }
 
         public IEnumerable<Ex1_ShipAndCommander> GetShipsAssignmentInfo(SampleData data)
         {
             //each ship shall be translated into an instance of Ex1_ShipAndCommander class
 
-            var results = new List<Ex1_ShipAndCommander>();
-            for (int i = 0; i < data.Ships.Count(); i++)
+            
+            return Project(
+                    data.Ships,
+                    ship => new Ex1_ShipAndCommander
+                            {
+                                ShipName = ship.Name,
+                                CaptainName = ship.Captain.Name
+                            }
+                );
+        }
+
+        private static List<T> Project<T>(List<SpaceWarship> ships, Func<SpaceWarship, T> elementMapping)
+        {
+            var results = new List<T>();
+            for (int i = 0; i < ships.Count(); i++)
             {
-                results.Add(new Ex1_ShipAndCommander
-                {
-                    ShipName = data.Ships[i].Name,
-                    CaptainName = data.Ships[i].Captain.Name
-                });
+                results.Add(elementMapping(ships[i]));
             }
 
             return results;
         }
-
 
     }
 
