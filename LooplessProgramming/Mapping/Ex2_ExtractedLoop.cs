@@ -17,7 +17,7 @@ namespace LooplessProgramming.Mapping
             //we want to map list of ships into 
             //list of ship's captain's experience (years of service)
 
-            return Project(data.Ships, ship => ship.Captain.YearsOfService);
+            return ApplyProjection(data.Ships, ship => ship.Captain.YearsOfService);
             
         }
 
@@ -26,7 +26,7 @@ namespace LooplessProgramming.Mapping
             //each ship shall be translated into an instance of Ex1_ShipAndCommander class
 
             
-            return Project(
+            return ApplyProjection(
                     data.Ships,
                     ship => new Ex1_ShipAndCommander
                             {
@@ -36,7 +36,7 @@ namespace LooplessProgramming.Mapping
                 );
         }
 
-        private static List<T> Project<T>(List<SpaceWarship> ships, Func<SpaceWarship, T> elementMapping)
+        private static List<T> ApplyProjection<T>(List<SpaceWarship> ships, Func<SpaceWarship, T> elementMapping)
         {
             var results = new List<T>();
             for (int i = 0; i < ships.Count(); i++)

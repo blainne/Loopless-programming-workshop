@@ -17,17 +17,17 @@ namespace LooplessProgramming.Tests.Mapping
         [TestMethod]
         public void GetShipsCaptainsExperienceReturnsYearsOfServiceOfEachCaptain()
         {
-            var experienceOfCaptains = data.Ships.Select(s => s.Captain.YearsOfService);
+            var expected = data.Ships.Select(s => s.Captain.YearsOfService);
 
             var result = Ex2.GetShipsCaptainsExperience(data);
 
-            result.ShouldAllBeEquivalentTo(experienceOfCaptains);
+            result.ShouldAllBeEquivalentTo(expected);
         }
 
         [TestMethod]
         public void GetShipsAssignmentInfoReturnsNamesOfShipsAndCaptains()
         {
-            var shipsInfos = 
+            var expected = 
                 data.Ships.Select(
                     s => 
                         new Ex1_ShipAndCommander
@@ -38,7 +38,7 @@ namespace LooplessProgramming.Tests.Mapping
 
             var result = Ex2.GetShipsAssignmentInfo(data);
 
-            result.ShouldAllBeEquivalentTo(shipsInfos);
+            result.ShouldAllBeEquivalentTo(expected);
         }
     }
 }
