@@ -27,7 +27,7 @@ namespace LooplessProgramming.Mapping
             return ApplyProjection(data.Ships, ship => ship.Crew);
         }
 
-        private static IEnumerable<TResult> ApplyProjection<T, TResult>(IEnumerable<T> collection, Func<T, TResult> elementMapping)
+        private IEnumerable<TResult> ApplyProjection<T, TResult>(IEnumerable<T> collection, Func<T, TResult> elementMapping)
         {
             var results = new List<TResult>();
             var enumerator = collection.GetEnumerator();

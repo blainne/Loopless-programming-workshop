@@ -210,6 +210,8 @@ namespace LooplessProgramming
 
             #endregion
             #region creating commanders
+
+            //This collection contains all captains and fleet commanders in a single list
             Commanders =
                 Ships.Select(ship => ship.Captain).ToList();
             Commanders.AddRange(Fleets.Select(pair => pair.Value.Commander));
