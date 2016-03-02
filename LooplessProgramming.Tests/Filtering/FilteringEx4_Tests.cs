@@ -27,7 +27,10 @@ namespace LooplessProgramming.Tests.Filtering
         public void GetAllBattleshipsReturnsOnlyBattleships()
         {
             var result = Ex4.GetAllBattleships(data);
-            result.Should().OnlyContain(ship => ship.ShipClass == WarshipClass.Battleship);
+            result
+                .Should()
+                .OnlyContain(ship => 
+                    ship.ShipClass == WarshipClass.Battleship);
         }
 
         [TestMethod]
@@ -51,7 +54,10 @@ namespace LooplessProgramming.Tests.Filtering
         {
             var result = Ex4.GetCommandersOnM(data);
 
-            result.Should().OnlyContain(person => person.Name.ToLower().StartsWith("m"));
+            result
+                .Should()
+                .OnlyContain(person => 
+                    person.Name.ToLower().StartsWith("m"));
         }
 
         [TestMethod]

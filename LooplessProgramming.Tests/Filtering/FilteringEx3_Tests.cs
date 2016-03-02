@@ -23,7 +23,10 @@ namespace LooplessProgramming.Tests.Filtering
         public void GetCaptainsWithMostResponsiblityReturnsCaptainsWithAtLeast1500Subordinates()
         {
             var result = Ex3.GetCaptainsWithMostResponsiblity(data);
-            result.Should().OnlyContain(captain => ExistsShipWithEnoughCrewAndThisCaptain(captain));
+            result
+                .Should()
+                .OnlyContain(captain => 
+                    ExistsShipWithEnoughCrewAndThisCaptain(captain));
         }
 
         [TestMethod]
@@ -39,7 +42,10 @@ namespace LooplessProgramming.Tests.Filtering
         {
             var result = Ex3.GetMultishipFleets(data);
 
-            result.Should().OnlyContain(fleet => fleet.Ships.Count() > 1);
+            result
+                .Should()
+                .OnlyContain(fleet => 
+                    fleet.Ships.Count() > 1);
         }
             
 

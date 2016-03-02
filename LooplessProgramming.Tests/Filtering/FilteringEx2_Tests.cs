@@ -18,7 +18,9 @@ namespace LooplessProgramming.Tests.Filtering
             var result = Ex2.GetBigCruisers(data);
 
             result
-                .Should().OnlyContain(ship => ship.ShipClass == WarshipClass.Cruiser);
+                .Should()
+                .OnlyContain(ship => 
+                    ship.ShipClass == WarshipClass.Cruiser);
         }
 
         [TestMethod]
@@ -27,7 +29,8 @@ namespace LooplessProgramming.Tests.Filtering
             var result = Ex2.GetBigCruisers(data);
 
             result
-                .Should().OnlyContain(ship => ship.Crew >= 2000);
+                .Should()
+                .OnlyContain(ship => ship.Crew >= 2000);
         }
 
         [TestMethod]
@@ -35,8 +38,7 @@ namespace LooplessProgramming.Tests.Filtering
         {
             var result = Ex2.GetBigCruisers(data);
 
-            result
-                .Should().OnlyHaveUniqueItems();
+            result.Should().OnlyHaveUniqueItems();
         }
 
         [TestMethod]
@@ -45,7 +47,9 @@ namespace LooplessProgramming.Tests.Filtering
             var result = Ex2.GetQuickReactingDestroyers(data);
 
             result
-                .Should().OnlyContain(ship => ship.ShipClass == WarshipClass.Destroyer);
+                .Should()
+                .OnlyContain(ship => 
+                    ship.ShipClass == WarshipClass.Destroyer);
         }
 
         [TestMethod]
@@ -53,9 +57,10 @@ namespace LooplessProgramming.Tests.Filtering
         {
             var result = Ex2.GetQuickReactingDestroyers(data);
 
-            result.Should().OnlyContain(
-                    ship => 
-                        data.Fleets["Quick reaction fleet"].Ships.Contains(ship));
+            result
+                .Should()
+                .OnlyContain(ship => 
+                    data.Fleets["Quick reaction fleet"].Ships.Contains(ship));
                 
         }
 

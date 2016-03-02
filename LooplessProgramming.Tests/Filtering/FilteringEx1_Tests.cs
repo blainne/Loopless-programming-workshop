@@ -16,7 +16,9 @@ namespace LooplessProgramming.Tests.Filtering
             var result = Ex1.GetShipsWithYoungCaptains(data);
 
             result
-                .Should().OnlyContain(ship => ship.Captain.YearsOfService <= 25);
+                .Should()
+                .OnlyContain(ship => 
+                    ship.Captain.YearsOfService <= 25);
         }
 
         [TestMethod]
