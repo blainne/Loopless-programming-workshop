@@ -72,6 +72,7 @@
     <Compile Include="Filtering\FilteringEx3_Tests.cs" />
     <Compile Include="Filtering\FilteringEx4_Tests.cs" />
     <Compile Include="Reducing\ReducingEx1_Tests.cs" />
+    <Compile Include="Reducing\ReducingEx2_Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
