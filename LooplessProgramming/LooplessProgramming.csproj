@@ -54,7 +54,7 @@
     <Compile Include="2 Mapping\Ex3_MoreGenericMapping.cs" />
     <Compile Include="2 Mapping\Ex4_MappingAsExtension.cs" />
     <Compile Include="3 Reducing\Ex1_LoopReducing.cs" />
-    <Compile Include="3 Reducing\Ex2_ExtractedLoop.cs" />
+    <Compile Include="3 Reducing\Ex2_ExtractedGenericLoop.cs" />
     <Compile Include="Model\AllDataModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
