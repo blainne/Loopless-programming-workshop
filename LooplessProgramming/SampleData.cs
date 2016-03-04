@@ -179,9 +179,9 @@ namespace LooplessProgramming
             };
             #endregion
             #region creating fleets
-            Fleets = new Dictionary<string,Fleet>
-            {
-                [HomeFleet] = 
+            Fleets = new Dictionary<string,Fleet>();
+            
+            Fleets[HomeFleet] = 
                         new Fleet
                         {
                             Name = HomeFleet,
@@ -192,9 +192,9 @@ namespace LooplessProgramming
                             },
                             Ships = this.Ships
 
-                        },
+                        };
 
-                [QuickReactionFleet] = 
+            Fleets[QuickReactionFleet] = 
                         new Fleet
                         {
                             Name = QuickReactionFleet,
@@ -204,8 +204,8 @@ namespace LooplessProgramming
                                 YearsOfService = 20
                             },
                             Ships = this.Ships.Where(s => s.Crew < 800)
-                        }
-            };
+                        };
+
 
 
             #endregion
