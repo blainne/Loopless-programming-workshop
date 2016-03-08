@@ -49,5 +49,7 @@ namespace LooplessProgramming.Tests.Reducing
 
             result.Should().Be(expected);
         }
+
+
     }
 }
