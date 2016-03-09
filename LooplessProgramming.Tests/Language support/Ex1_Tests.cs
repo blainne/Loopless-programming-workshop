@@ -13,57 +13,47 @@ namespace LooplessProgramming.Tests.Language_support
     {
         private readonly Ex1_ExtensionsAsStyle Ex1 = new Ex1_ExtensionsAsStyle();
         private readonly SampleData data = new SampleData();
+        private int sumOfDestroyersCrews;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            sumOfDestroyersCrews = 
+                data.Ships
+                .Where(s => s.ShipClass == WarshipClass.Destroyer)
+                .Sum(s => s.Crew);
+        }
 
         [TestMethod]
         public void TotalCrewOnDestroyers_1_ShouldGiveCorrectResult()
         {
-            var expected =
-                data.Ships
-                    .Where(s => s.ShipClass == WarshipClass.Destroyer)
-                    .Sum(s => s.Crew);
-
             var result = Ex1.TotalCrewOnDestroyers_1(data);
 
-            result.Should().Be(expected);
+            result.Should().Be(sumOfDestroyersCrews);
         }
 
         [TestMethod]
         public void TotalCrewOnDestroyers_2_ShouldGiveCorrectResult()
         {
-            var expected =
-                data.Ships
-                    .Where(s => s.ShipClass == WarshipClass.Destroyer)
-                    .Sum(s => s.Crew);
-
             var result = Ex1.TotalCrewOnDestroyers_2(data);
 
-            result.Should().Be(expected);
+            result.Should().Be(sumOfDestroyersCrews);
         }
 
         [TestMethod]
         public void TotalCrewOnDestroyers_3_ShouldGiveCorrectResult()
         {
-            var expected =
-                data.Ships
-                    .Where(s => s.ShipClass == WarshipClass.Destroyer)
-                    .Sum(s => s.Crew);
-
             var result = Ex1.TotalCrewOnDestroyers_3(data);
 
-            result.Should().Be(expected);
+            result.Should().Be(sumOfDestroyersCrews);
         }
 
         [TestMethod]
         public void TotalCrewOnDestroyers_4_ShouldGiveCorrectResult()
         {
-            var expected =
-                data.Ships
-                    .Where(s => s.ShipClass == WarshipClass.Destroyer)
-                    .Sum(s => s.Crew);
-
             var result = Ex1.TotalCrewOnDestroyers_4(data);
 
-            result.Should().Be(expected);
+            result.Should().Be(sumOfDestroyersCrews);
         }
     }
 }

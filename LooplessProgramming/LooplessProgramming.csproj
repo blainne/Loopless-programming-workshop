@@ -58,6 +58,7 @@
     <Compile Include="3 Reducing\Ex3_ReducingAsExtension.cs" />
     <Compile Include="4 Language support\Ex1_ExtensionsAsStyle.cs" />
     <Compile Include="4 Language support\Ex2_AnonymousObjects.cs" />
+    <Compile Include="4 Language support\Ex3_LinqSupport.cs" />
     <Compile Include="Model\AllDataModels.cs" />
     <Compile Include="MyLinq.cs" />
     <Compile Include="Program.cs" />
