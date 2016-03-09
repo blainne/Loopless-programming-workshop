@@ -48,7 +48,7 @@ namespace LooplessProgramming.Tests.Loop_refactoring
         [TestMethod]
         public void AreAllStringsLongerThan5_ReturnsFalseWhenTooShortStringExists()
         {
-            var stringData = new List<string> {"somethingLonger", "aaaaaaaa", "bbbbbbb", "", "something"};
+            var stringData = new List<string> {"somethingLonger", "aaaaaaaa", "bbbbbbb", "", "something", "4444"};
             var expected = stringData.All(s => s.Length > 5);
             var result = Ex1.AreAllStringsLongerThan5(stringData);
 

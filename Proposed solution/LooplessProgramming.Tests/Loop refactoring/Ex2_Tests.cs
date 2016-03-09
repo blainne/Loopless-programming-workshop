@@ -16,9 +16,9 @@ namespace LooplessProgramming.Tests.Loop_refactoring
         private readonly SampleData data = new SampleData();
 
         [TestMethod]
-        public void AreAllNonEmptyStringsLongerThan5_ReturnsFalseWhenTooIncorrectStringExists()
+        public void AreAllNonEmptyStringsLongerThan5_ReturnsFalseWhenIncorrectStringExists()
         {
-            var stringData = new List<string> {null, "", "somethingLonger", "aaaaaaaa", "bbbbbbb", "  ", "something" };
+            var stringData = new List<string> {null, "", "somethingLonger", "aaaaaaaa", "bbbbbbb", "1234" , "something" };
             var expected = stringData.Where(s => !string.IsNullOrEmpty(s)).All(s => s.Length > 5);
             var result = Ex2.AreAllNonEmptyStringsLongerThan5(stringData);
 
