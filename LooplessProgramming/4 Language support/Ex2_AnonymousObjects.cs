@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LooplessProgramming.MyLinq;
 
-namespace LooplessProgramming._4_Language_support
+namespace LooplessProgramming.LanguageSupport
 {
     public class Ex2_AnonymousObjects
     {

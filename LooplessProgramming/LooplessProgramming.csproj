@@ -59,6 +59,8 @@
     <Compile Include="4 Language support\Ex1_ExtensionsAsStyle.cs" />
     <Compile Include="4 Language support\Ex2_AnonymousObjects.cs" />
     <Compile Include="4 Language support\Ex3_LinqSupport.cs" />
+    <Compile Include="5 Loop refactoring\Ex1_Simple.cs" />
+    <Compile Include="5 Loop refactoring\Ex2_Complex.cs" />
     <Compile Include="Model\AllDataModels.cs" />
     <Compile Include="MyLinq.cs" />
     <Compile Include="Program.cs" />

@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using LooplessProgramming._3_Reducing;
+using LooplessProgramming.Reducing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

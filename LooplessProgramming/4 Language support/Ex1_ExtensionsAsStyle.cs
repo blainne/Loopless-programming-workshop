@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using LooplessProgramming.MyLinq;
 using LooplessProgramming.Model;
 
-namespace LooplessProgramming._4_Language_support
+namespace LooplessProgramming.LanguageSupport
 {
     public class Ex1_ExtensionsAsStyle
     {

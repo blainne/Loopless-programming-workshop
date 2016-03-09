@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LooplessProgramming._3_Reducing
+namespace LooplessProgramming.Reducing
 {
     public static class Ex3_ReducingAsExtension
     {

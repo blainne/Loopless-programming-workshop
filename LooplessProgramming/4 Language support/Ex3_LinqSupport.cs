@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LooplessProgramming.Model;
 
-namespace LooplessProgramming._4_Language_support
+namespace LooplessProgramming.LanguageSupport
 {
     public class Ex3_LinqSupport
     {

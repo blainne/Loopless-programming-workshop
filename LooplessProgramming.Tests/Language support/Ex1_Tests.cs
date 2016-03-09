@@ -3,7 +3,7 @@ using LooplessProgramming.Mapping;
 using System.Linq;
 using FluentAssertions;
 using LooplessProgramming.Model;
-using LooplessProgramming._4_Language_support;
+using LooplessProgramming.LanguageSupport;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LooplessProgramming.Tests.Language_support

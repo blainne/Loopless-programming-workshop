@@ -67,6 +67,8 @@
     <Compile Include="Language support\Ex1_Tests.cs" />
     <Compile Include="Language support\Ex2_Tests.cs" />
     <Compile Include="Language support\Ex3_Tests.cs" />
+    <Compile Include="Loop refactoring\Ex1_tests.cs" />
+    <Compile Include="Loop refactoring\Ex2_Tests.cs" />
     <Compile Include="Mapping\MappingEx1_Tests.cs" />
     <Compile Include="Mapping\MappingEx2_Tests.cs" />
     <Compile Include="Mapping\MappingEx3_Tests.cs" />

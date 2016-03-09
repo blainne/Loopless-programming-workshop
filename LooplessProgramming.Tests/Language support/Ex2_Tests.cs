@@ -1,4 +1,4 @@
-﻿using LooplessProgramming._4_Language_support;
+﻿using LooplessProgramming.LanguageSupport;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LooplessProgramming.Tests.Language_support
 {
     [TestClass]
-    class Ex2_Tests
+    public class Ex2_Tests
     {
         private readonly Ex2_AnonymousObjects Ex2 = new Ex2_AnonymousObjects();
         private readonly SampleData data = new SampleData();
