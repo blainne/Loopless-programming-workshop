@@ -16,10 +16,7 @@ namespace LooplessProgramming.LanguageSupport
 
         public IEnumerable<string> GetNamesOfBattleships(SampleData data)
         {
-            return
-                from s in data.Ships
-                where s.ShipClass == WarshipClass.Battleship
-                select s.Name;
+            return null;
 
         }
     }

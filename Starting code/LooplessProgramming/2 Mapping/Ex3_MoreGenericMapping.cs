@@ -15,8 +15,8 @@ namespace LooplessProgramming.Mapping
         public IEnumerable<string> GetFleetsNames(SampleData data)
         {
             //We want to return a collection of names of all fleets.
-       
-            return ApplyProjection(data.Fleets.Values, fleet => fleet.Name);
+
+            return null;
 
         }
 
@@ -24,26 +24,7 @@ namespace LooplessProgramming.Mapping
         {
             //The result shall be collection of numbers of crewmembers of each ship
 
-            return ApplyProjection(data.Ships, ship => ship.Crew);
-        }
-
-        private IEnumerable<TResult> ApplyProjection<T, TResult>(IEnumerable<T> collection, Func<T, TResult> elementMapping)
-        {
-            var results = new List<TResult>();
-            var enumerator = collection.GetEnumerator();
-
-
-            //not a good idea to use for to iterate over IEnuerable, but wanted to try it
-            for (
-                var hasNext = enumerator.MoveNext(); 
-                hasNext != false; 
-                hasNext = enumerator.MoveNext()
-            )
-            {
-                results.Add(elementMapping(enumerator.Current));
-            }
-
-            return results;
+            return null;
         }
     }
 }

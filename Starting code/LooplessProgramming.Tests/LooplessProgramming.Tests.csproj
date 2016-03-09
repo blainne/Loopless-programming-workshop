@@ -64,11 +64,11 @@
   <ItemGroup>
     <Compile Include="Filtering\FilteringEx1_Tests.cs" />
     <Compile Include="Filtering\FilteringEx2_Tests.cs" />
-    <Compile Include="Language support\Ex1_Tests.cs" />
-    <Compile Include="Language support\Ex2_Tests.cs" />
-    <Compile Include="Language support\Ex3_Tests.cs" />
-    <Compile Include="Loop refactoring\Ex1_tests.cs" />
-    <Compile Include="Loop refactoring\Ex2_Tests.cs" />
+    <Compile Include="Language support\LanguageEx1_Tests.cs" />
+    <Compile Include="Language support\LanguageEx2_Tests.cs" />
+    <Compile Include="Language support\LanguageEx3_Tests.cs" />
+    <Compile Include="Loop refactoring\RefactoringEx1_Tests.cs" />
+    <Compile Include="Loop refactoring\RefactoringEx2_Tests.cs" />
     <Compile Include="Mapping\MappingEx1_Tests.cs" />
     <Compile Include="Mapping\MappingEx2_Tests.cs" />
     <Compile Include="Mapping\MappingEx3_Tests.cs" />

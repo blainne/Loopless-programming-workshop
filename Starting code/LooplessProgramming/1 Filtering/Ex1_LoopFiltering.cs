@@ -13,14 +13,7 @@ namespace LooplessProgramming.Filtering
 
             //Use a loop to implement it.
 
-            var result = new List<SpaceWarship>();
-            foreach (var ship in data.Ships)
-            {
-                if(ship.Captain.YearsOfService <= 25)
-                    result.Add(ship);
-            }
-
-            return result;
+            return null;
 
         }
     }

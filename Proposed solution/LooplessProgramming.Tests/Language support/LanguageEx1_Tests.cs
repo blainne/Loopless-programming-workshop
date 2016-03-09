@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LooplessProgramming.Tests.Language_support
 {
     [TestClass]
-    public class Ex1_Tests
+    public class LanguageEx1_Tests
     {
         private readonly Ex1_ExtensionsAsStyle Ex1 = new Ex1_ExtensionsAsStyle();
         private readonly SampleData data = new SampleData();

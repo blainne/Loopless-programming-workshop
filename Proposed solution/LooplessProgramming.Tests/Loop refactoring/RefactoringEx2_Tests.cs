@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LooplessProgramming.Tests.Loop_refactoring
 {
     [TestClass]
-    public class Ex2_Tests
+    public class RefactoringEx2_Tests
     {
         private readonly Ex2_Complex Ex2 = new Ex2_Complex();
         private readonly SampleData data = new SampleData();

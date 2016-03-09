@@ -12,19 +12,6 @@ namespace LooplessProgramming.Reducing
         //Just take Your reducing function and turn it into an extension method.
         //After that use it to implement method in the class below.
 
-        public static Result Reduce<Result, Model>(
-            this IEnumerable<Model> collection,
-            Result initial,
-            Func<Result, Model, Result> calcFun)
-        {
-            var result = initial;
-            foreach (var element in collection)
-            {
-                result = calcFun(result, element);
-            }
-
-            return result;
-        }
     }
 
     public class Ex3_ReducingData
@@ -33,7 +20,7 @@ namespace LooplessProgramming.Reducing
         {
             //Just calculate a sum of years of service over all ships captains
 
-            return data.Ships.Reduce(0, (acc, ship) => acc + ship.Captain.YearsOfService);
+            return int.MinValue;
         }     
     }
 }

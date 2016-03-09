@@ -32,10 +32,7 @@ namespace LooplessProgramming.LanguageSupport
     
             var rand = new Random();
 
-            return data.Ships
-                .Map(ship => new {Name = ship.Name, Number = rand.Next()})
-                .Filter(sn => sn.Number % 2 == 1)
-                .Map(sn => String.Format("{0}: {1}", sn.Name, sn.Number));
+            return null;
         }
 
         private class ShipAssignment

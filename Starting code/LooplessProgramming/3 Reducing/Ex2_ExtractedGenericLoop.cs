@@ -12,11 +12,9 @@ namespace LooplessProgramming.Reducing
         public SpaceWarship GetSmallestShip(SampleData data)
         {
             //A ship with smallest crew shall be returned here;
+            //You can use GetSmallerShip() method present in this class to compare ships
 
-            return CalculateValue(
-                        data.Ships, 
-                        data.Ships.First(),
-                        GetSmallerShip);
+            return null;
         }
 
         private SpaceWarship GetSmallerShip(SpaceWarship ship1, SpaceWarship ship2)
@@ -31,24 +29,8 @@ namespace LooplessProgramming.Reducing
             //This shall be a single string in form "name1,name2,name3,"
             //Pay attention to the trailing comma - it's there for Your convenience
 
-            return CalculateValue(
-                        data.Commanders,
-                        "",
-                        (names, next) => names + next.Name + ",");
+            return null;
         }
 
-        public Result CalculateValue<Result, Model>(
-            IEnumerable<Model> collection,
-            Result initial, 
-            Func<Result, Model, Result> calcFun)
-        {
-            var result = initial;
-            foreach(var element in collection)
-            {
-                result = calcFun(result, element);
-            }
-
-            return result;
-        }
     }
 }

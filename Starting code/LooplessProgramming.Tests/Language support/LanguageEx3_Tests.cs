@@ -11,7 +11,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LooplessProgramming.Tests.Language_support
 {
     [TestClass]
-    public class Ex3_Tests
+    public class LanguageEx3_Tests
     {
         private readonly Ex3_LinqSupport Ex3 = new Ex3_LinqSupport();
         private readonly SampleData data = new SampleData();

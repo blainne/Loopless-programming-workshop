@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LooplessProgramming.Tests.Language_support
 {
     [TestClass]
-    public class Ex2_Tests
+    public class LanguageEx2_Tests
     {
         private readonly Ex2_AnonymousObjects Ex2 = new Ex2_AnonymousObjects();
         private readonly SampleData data = new SampleData();
