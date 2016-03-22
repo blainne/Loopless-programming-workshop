@@ -15,10 +15,10 @@ The Visual Studio solution (.sln) itself contains two projects. One with exercis
 
 ###Requirements
 * Visual Studio 2013/2015 (Community edition is enough)
-* Good knowlege of C# programming language, in particular: 
-  * Func<> delegates, 
+* Good knowledge of C# programming language, in particular: 
+  * `Func<>` delegates, 
   * lambdas and captured variables (closures)
-  * IEnumerable<T> interface,
+  * `IEnumerable<T>` interface,
 * LINQ knowledge is a plus 
 
 
